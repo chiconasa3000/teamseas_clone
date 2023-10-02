@@ -5,6 +5,7 @@ import {GraphQLModule} from '@nestjs/graphql';
 import {ApolloServerPluginLandingPageLocalDefault} from '@apollo/server/plugin/landingPage/default';
 import {ApolloDriver, ApolloDriverConfig} from '@nestjs/apollo';
 import { DonationsModule } from './donations/donations.module';
+//import {GraphQLDateTime} from 'graphql-iso-date';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { DonationsModule } from './donations/donations.module';
       playground: false,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
       typePaths: ['./**/*.graphql'],
+      //resolvers: {DateTime: GraphQLDateTime},
     }),
     DonationsModule,
   ],
