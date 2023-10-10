@@ -4,8 +4,13 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  
+  //mechanism that allows restricted resources 
+  app.enableCors();
+
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(3000);
+  
+  await app.listen(3001);
   //app.enableShutdownHooks();
 }
 bootstrap();

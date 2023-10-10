@@ -15,6 +15,10 @@ import { DonationsModule } from './donations/donations.module';
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
       typePaths: ['./**/*.graphql'],
       //resolvers: {DateTime: GraphQLDateTime},
+      subscriptions:{
+        'graphql-ws': true,
+        'subscriptions-transport-ws': true,
+      }
     }),
     DonationsModule,
   ],
