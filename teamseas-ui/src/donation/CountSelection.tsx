@@ -57,7 +57,7 @@ export const CountSelection = ({initialCount,next}: Props) => {
                 setPounds(parseInt(value));
                 setCustomAmount(value);
             }} value={customAmount}>
-                <NumberInputField placeholder='Other ammount'>
+                <NumberInputField placeholder='Other ammount' _placeholder={{ opacity: 1, color: 'gray.500' }}>
                 </NumberInputField>
             </NumberInput>
 

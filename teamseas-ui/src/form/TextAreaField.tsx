@@ -25,7 +25,7 @@ export const TextareaField = ({
             >
                 {label}
             </FormLabel>
-            <Textarea id={field.name} placeholder={placeholder} {...field}/>
+            <Textarea id={field.name} placeholder={placeholder} _placeholder={{ opacity: 1, color: 'gray.500' }} {...field}/>
             <FormErrorMessage>{meta.error}</FormErrorMessage>
         </FormControl>
     );
